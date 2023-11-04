@@ -14,7 +14,8 @@ This repository is dedicated to documenting my daily practice of Terraform, an i
 Feel free to explore this repository, ask questions, and contribute to the learning process. Let's embark on this Terraform adventure together!
 
 ## Contents
-<!-- - [Day 1: Setting up Terraform](#day1-setting-up-terraform) -->
+- [Day 1: Provision an AWS EC2](#day1-provision-an-aws-ec2)
+
 <!-- - [Day 2: Creating Your First Resource](#day2-creating-your-first-resource) -->
 <!-- - [Day 3: Managing Variables](#day1-managing-variables) -->
 
