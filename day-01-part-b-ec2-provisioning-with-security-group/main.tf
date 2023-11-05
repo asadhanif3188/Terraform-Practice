@@ -60,7 +60,7 @@ resource "aws_instance" "production_server" {
   instance_type = "t2.micro"
   key_name      = "practice-key"  # Use your existing key pair name
   security_groups = [aws_security_group.production_security_group.name]
-  instance_tags = {
+  tags = {
     Name = "production server"
   }
 
