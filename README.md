@@ -111,6 +111,8 @@ The following Terraform configuration creates an EC2 instance with:
 - key-pair name `practice-key`
 - block storage 20 GB
 
+**main.tf file contains following code:**
+
 ```
 terraform {
   required_providers {
@@ -175,7 +177,7 @@ resource "aws_instance" "production_server" {
   key_name      = "practice-key"  # Use your existing key pair name
   security_groups = [aws_security_group.production_security_group.name]
   tags = {
-    Name = "production server"
+    Name = var.instance_name
   }
 
   root_block_device {
@@ -184,7 +186,14 @@ resource "aws_instance" "production_server" {
 }
 ```
 
-
+**variables.tf file contains following code:**
+```
+variable "instance_name" {
+  description = "Value of the Name tag for the EC2 instance"
+  type        = string
+  default     = "production server"
+}
+```
 
 
 <!-- # Day 1: Setting up Terraform -->
